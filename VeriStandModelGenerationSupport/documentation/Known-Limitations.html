@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <title>Known Limitations</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1>Known Limitations</h1>
+
+<p>Certain MathWorks Simulink® functionality is disabled while building VeriStand models.</p>
+<h2 id="solver-constraints">Solver Constraints</h2>
+<p>The solver only supports the <strong>Fixed-step</strong> type. The Fixed-step size (fundamental sample time) parameter value has limitations. Automatic step size is not supported. Expressions containing variables with <code>Simulink.Parameter</code> or <code>Simulink.Signal</code> type are not supported unless the expression represents a simple variable name. For example, <code>var</code> is supported, but <code>var + 1</code> is not if <em>var</em> is one of the two types. This constraint applies only to <code>Simulink.Parameter</code> or <code>Simulink.Signal</code> operands. VeriStand supports expressions containing variables with base-supported data types. A step size from the model may differ from the actual step size. VeriStand always uses a six-digit precision number for the step size.<br />
+<br />
+For periodic sample time constraint, only <strong>Unconstrained</strong> and <strong>Ensure sample time independent</strong> are supported. The <strong>Automatically handle rate transition for data transfer</strong> is checked but not enforced. This option does not exist if the sample time constraint is <strong>Ensure sample time independent</strong>. Also, this option won't be checked by default if the sample time constraint is set to <strong>Ensure sample time independent</strong> when selecting the veristand.tlc and setting the <strong>Unconstrained</strong> value later.<br />
+<br />
+The <strong>Treat each discrete rate as a separate task</strong> option is enabled and enforced.</p>
+<h2 id="unsupported-data-types">Unsupported Data Types</h2>
+<p>VeriStand models support nonvirtual bus, numeric, and Boolean Simulink data types. The following data types are not supported:</p>
+<ul>
+<li>Strings</li>
+<li>Enums</li>
+<li>Array of buses</li>
+<li>Arrays with more than 2 dimensions</li>
+<li>Fixed-Point numeric data types</li>
+<li>Complex numeric data types</li>
+</ul>
+<p><strong>Note</strong>: Models with these data types can be built if the <strong>Turn warnings into errors for unsupported data types</strong> option is disabled.<br />
+<br />
+Virtual bus outports are not supported. Depending on the configuration, either an error or warning is generated while building the model. Bus element ports are not supported, regardless of configuration.<br />
+<br />
+When treated as warnings, the ports, parameters or bus elements that have unsupported data types are ignored by VeriStand when importing and running the model. You are not able to get or set values for those ports, parameters or bus elements.</p>
+<h2 id="arrays-layout">Arrays Layout</h2>
+<p>Arrays are stored using a column-major order. VeriStand supports the same layout for arrays, making this order the highest-performance choice</p>
+<h2 id="code-interface">Code Interface</h2>
+<p>The <strong>Nonreusable function</strong> option is enforced.<br />
+<br />
+The <strong>Single output/update function</strong> option is disabled and greyed out.</p>
+<h2 id="signals">Signals</h2>
+<p>Enabling bus type signals is not supported.</p>
+<h2 id="hardware-implementation">Hardware Implementation</h2>
+<p>The <strong>Support long long</strong> option must be enabled. If disabled, an error will occur at build time.</p>
+<h2 id="nonvirtual-bus-types-naming">Nonvirtual Bus Types Naming</h2>
+<p>Nonvirtual bus types that have the same name as Simulink multiword struct definitions are not supported and an error is generated while building the model. These names match the following patterns:</p>
+<ul>
+<li>int<em>&lt;num&gt;</em>m_T</li>
+<li>cint<em>&lt;num&gt;</em>m_T</li>
+<li>uint<em>&lt;num&gt;</em>m_T</li>
+<li>cuint<em>&lt;num&gt;</em>m_T</li>
+</ul>
+<p><strong>Note</strong>: The <em>&lt;num&gt;</em> variable represents a multiple of 64 and that is greater or equal than 128. This is true regardless of the value of Maximum word length (<code>MultiwordLength</code>).</p>
+</body>
+</html>

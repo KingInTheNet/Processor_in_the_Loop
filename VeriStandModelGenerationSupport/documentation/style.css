@@ -1,0 +1,219 @@
+@import url("css_reset.css");
+
+:root {
+    --NI-Forest-Green: #044123;
+    --NI-Green: #03b585;
+    --NI-Pale-Green: #ccdcc8;
+    --p20-Black: #cccccc;
+    --semi-bold: 600;
+    --Unicode-Bullet: "\2022";
+    --Unicode-White-Bullet: "\25E6";
+    --Unicode-Black-Small-Square: "\25AA";
+    --Unicode-White-Small-Square: "\25AB";
+}
+
+a,
+h1,
+th,
+ol li:before,
+ol ul li:before {
+    color: var(--NI-Forest-Green);
+}
+
+h2,
+h3,
+body,
+td {
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 8mm 0 6mm 0;
+}
+
+/* Top margin for the fist child in body causes the secondary scroll to appear in MATLAB Browser */
+body > *:first-child {
+    margin-top: 0;
+}
+
+p,
+ol,
+ul {
+    margin: 0 0 6mm 0;
+}
+
+h2,
+h3,
+h4 {
+    font-weight: lighter;
+}
+
+h1 {
+    font-family: "Financier Display", serif;
+    font-weight: normal;
+    font-size: 28pt;
+}
+
+h2 {
+    font-size: 24pt;
+}
+
+h3 {
+    font-size: 22pt;
+}
+
+h4 {
+    font-size: 20pt;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 12pt;
+    padding-top: 8mm;
+}
+
+table {
+    margin: 4mm 0 4mm 0;
+}
+
+th,
+td {
+    font-weight: var(--semi-bold);
+    font-size: 10pt;
+    padding: 2mm;
+}
+
+th {
+    background-color: var(--NI-Pale-Green);
+    border: .4pt solid white;
+    border-top: .4pt solid var(--NI-Green);
+    text-align: left;
+}
+
+td {
+    background-color: white;
+    border: .25pt solid var(--p20-Black);
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    border-left: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    border-right: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+li {
+    margin: 0 0 4mm 0;
+}
+
+ul {
+    margin-left: 4mm;
+}
+
+ul ul {
+    margin-top: 4mm;
+    margin-left: 6mm;
+}
+
+ul li:before,
+ol li:before,
+ol ul li:before {
+    display: inline-block;
+}
+
+ul li:before {
+    color: var(--NI-Green);
+    content: var(--Unicode-Bullet);
+    margin-right: 4mm;
+}
+
+ul li li:before {
+    content: var(--Unicode-White-Bullet);
+}
+
+ul li li li:before {
+    content: var(--Unicode-Black-Small-Square);
+}
+
+ul li li li li:before {
+    content: var(--Unicode-White-Small-Square);
+}
+
+ol {
+    counter-reset: listItem;
+    margin-left: 2mm;
+}
+
+ol ol {
+    margin-left: 8mm;
+}
+
+ol li:before {
+    content: counter(listItem) ".";
+    counter-increment: listItem;
+    margin-right: 2mm;
+}
+
+ol ul {
+    margin-left: 10mm;
+}
+
+ol ul li:before {
+    content: var(--Unicode-Bullet);
+    margin-right: 4mm;
+}
+
+code {
+    font-family: monospace;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+i {
+    font-style: italic;
+}
+
+.diagonal-split {
+    background: linear-gradient(
+        to top right,
+        var(--NI-Pale-Green) 49.5%,
+        #aaa 49.5%,
+        #aaa 50.5%,
+        var(--NI-Pale-Green) 50.5%
+    );
+}
+
+.above-diagonal-split {
+    margin-left: 2em;
+    text-align: right;
+}
+
+.left-img {
+    align-self: left;
+}
+
+.external-mode-port-img {
+    width: 500px;
+}
+
+.below-diagonal-split {
+    margin-right: 2em;
+    text-align: left;
+}
+
+.not-bold {
+    font-weight: normal;
+}

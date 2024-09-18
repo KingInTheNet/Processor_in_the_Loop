@@ -1,0 +1,1 @@
+mex -v sfunc_AOBC.c AOCS_Process.c globals.c

@@ -1,0 +1,20 @@
+typedef struct{
+    unsigned char gyro;
+    unsigned char stt2;
+    unsigned char stt1;
+    unsigned char dcdc_rw;
+    unsigned char dcdc_mtq;
+    unsigned char dcdc_sns;
+    unsigned char gas;
+    unsigned char nsas6;
+    unsigned char nsas5;
+    unsigned char nsas4;
+    unsigned char nsas3;
+    unsigned char nsas2;
+    unsigned char nsas1;
+    unsigned char gps;
+    unsigned char rw4;
+    unsigned char rw3;
+    unsigned char rw2;
+    unsigned char rw1;
+} BPDU_STRUCT;

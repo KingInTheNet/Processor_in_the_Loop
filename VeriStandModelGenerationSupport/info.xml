@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<productinfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="optional">
+    <?xml-stylesheet type="text/xsl"href="optional"?>
+    <!-- Copyright 2022 NI.-->
+    
+    <matlabrelease>2020a</matlabrelease>
+    <name>VeriStand Model Generation Support</name>
+    <type>toolbox</type>
+    <icon/>
+    <help_location>documentation</help_location>
+    <help_contents_icon/>
+</productinfo>

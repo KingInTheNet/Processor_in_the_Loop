@@ -1,0 +1,51 @@
+%% SYSTLC: VeriStand Targets (Windows & NI Linux Real-Time 64-bit) \
+%%    MAKE: make_rtw EXTMODE: ext_comm
+%%
+%% Abstract:
+%%    System TLC file for VeriStand Targets: Windows & NI Linux Real-Time 64-bit
+
+%selectfile NULL_FILE
+
+%assign TargetType = "RT"
+%assign Language   = "C"
+%assign GenRTModel = 1
+
+%include "codegenentry.tlc"
+
+/%
+    BEGIN_RTW_OPTIONS
+
+    rtwoptions(1).prompt        = 'VeriStand';
+    rtwoptions(1).type          = 'Category';
+    rtwoptions(1).enable        = 'on';
+    % number of items under this category excluding this one.
+    rtwoptions(1).default       = 2;
+    rtwoptions(1).popupstrings  = '';  % At the first item, user has to
+    rtwoptions(1).tlcvariable   = '';  % initialize all supported fields
+    rtwoptions(1).tooltip       = '';
+    rtwoptions(1).callback      = '';
+    rtwoptions(1).makevariable  = '';
+
+    rtwoptions(2).prompt        = 'Turn warnings into errors for unsupported data types';
+    rtwoptions(2).type          = 'Checkbox';
+    rtwoptions(2).default       = 'off';
+    rtwoptions(2).tlcvariable   = VeriStandModelGenerator.NIRaiseErrorForUnsuportedDataTypesPropertyName;
+    rtwoptions(2).tooltip       = ['']; % no tooltip
+
+    rtwoptions(3).prompt        = 'Allow same parameter names across Simulink Workspaces';
+    rtwoptions(3).type          = 'Checkbox';
+    rtwoptions(3).default       = 'on';
+    rtwoptions(3).tlcvariable   = VeriStandModelGenerator.NIAllowParameterNameSharingPropertyName;
+    rtwoptions(3).tooltip       = ['']; % no tooltip
+
+    %----------------------------------------%
+    % Configure code generation settings %
+    %----------------------------------------%
+
+    rtwgensettings.BuildDirSuffix = '_veristand_rtw';
+    rtwgensettings.DerivedFrom = 'grt.tlc';
+    rtwgensettings.Version = '1';
+    rtwgensettings.SelectCallback = 'VeriStandConfigVsmodel().SelectCallback(hDlg, hSrc)';
+
+    END_RTW_OPTIONS
+ %/

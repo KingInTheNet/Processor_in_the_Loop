@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <title>Getting Started</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1>Getting Started</h1>
+
+<p>Use <a href="Index.html">VeriStand Model Generation Support</a> to create VeriStand compatible models within the MathWorks Simulink® environment.</p>
+<p>Before you begin, <a href="Installation-Guide.html">install all required software</a> and ensure you are running <a href="Compatibility-Considerations.html">supported versions of MATLAB and Simulink</a>.</p>
+<ol type="1">
+<li>Open a model in the Simulink Editor.</li>
+<li>Click <strong>Model Settings</strong> » <strong>Model configuration parameters</strong>.</li>
+<li>In the Configuration Parameters: Configuration window, click <strong>Code Generation</strong> and set the <strong>System target file</strong> to <code>veristand.tlc</code>.</li>
+<li>In the <strong>Toolchain</strong> drop-down box, select the VeriStand toolchain based on the destination target.</li>
+<table>
+<thead>
+<tr class="header">
+<th>Target</th>
+<th>Toolchain</th>
+<th>Device vendor</th>
+<th>Device type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Windows</td>
+<td>GCC Compiler for VeriStand Windows targets | gmake makefile (64-bit Windows)</td>
+<td>Intel/AMD</td>
+<td>x86-64 (Windows64)</td>
+</tr>
+<tr class="even">
+<td>Linux Real-Time</td>
+<td>GCC Compiler for VeriStand NI Linux Real-Time targets | gmake makefile (64-bit Windows)</td>
+<td>Intel</td>
+<td>x86-64 (Linux 64)</td>
+</tr>
+</tbody>
+</table></li>
+<li>Under <strong>Hardware Implementation</strong> set the compatible device type and device vendor.</li>
+<li><strong>(Optional)</strong> Enable Signals to be exported. Under <strong>Code Generation</strong> » <strong>Interface</strong> enable the <strong>Signals</strong> checkbox and designate the required signals on the block diagram as <strong>Test Point</strong>.</li>
+<li><strong>(Optional)</strong> Enable External Mode. Refer to <a href="External-Mode.html">External Mode</a> section for more details.</li>
+<li><strong>(Optional)</strong> Update other model configuration settings.</li>
+<li>Click <strong>OK</strong>.</li>
+<li>Build the model.</li>
+</ol>
+<p>Once built, the <code>.vsmodel</code> file will appear in the code generation folder. This model can be imported into a VeriStand system definition and deployed to Windows and NI Linux Real-Time systems.</p>
+<p><strong>Note</strong>: VeriStand Model Generation Support does not provide an API.</p>
+<p>NI supports VeriStand Model Generation Support. For issues related to this add-on, visit <a href="https://www.ni.com/ask">www.ni.com/ask</a> to open a service request or file a bug report.</p>
+</body>
+</html>

@@ -1,0 +1,1 @@
+mex -v sfunc_nrlmsise00.c nrlmsise-00.c nrlmsise-00_data.c sfunc_nrlmsise00_wrapper.c

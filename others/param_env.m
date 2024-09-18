@@ -1,0 +1,10 @@
+GE = 3.986004356e+5; % km^3/s^2
+J2 = 1.0826359e-3;
+TOLERANCE=1.0e-10;
+wE = [0; 0; 7.292115e-5]; % rad/s
+CD = 2.2;
+pSR = 4.56e-6; % N/m^2
+CR = 1.2; % reflectivity
+earth_radius = 6378.1366; % (km)
+%UT_UT1=0;
+UT1_UTC=0;

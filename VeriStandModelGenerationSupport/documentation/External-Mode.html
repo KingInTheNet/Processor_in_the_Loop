@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <title>External Mode</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1>External Mode</h1>
+
+<p>External mode simulation establishes a communication channel between Simulink on your model development computer (host) and the model running on NI hardware (target). This enables you to visualize signals and tune parameters from Simulink.</p>
+<ol type="1">
+<li>Open Model Configuration Parameters</li>
+<li>Navigate to Code Generation &gt; Interface.</li>
+<li>In the Data exchange interface section, enable External mode.</li>
+<li>In the External mode configuration section, set the Transport layer as 'tcpip' or 'XCP on TCP/IP'.</li>
+</ol>
+<p><strong>Note:</strong> For more information on related external mode settings, refer to <a href="https://www.mathworks.com/help/ecoder/ug/external-mode-simulation-with-tcpip-or-serial-communication.html">External Mode Simulation with TCP/IP or Serial Communication</a> or <a href="https://www.mathworks.com/help/ecoder/ug/external-mode-simulation-with-xcp-communication.html">External Mode Simulation with XCP Communication.</a></p>
+<figure>
+<img src="resources/external_mode_setting.png" alt="external_mode_setting" />
+</figure>
+<p><strong>Note:</strong> The parameter name ExternalMode/Port is reserved. Do not use this name in your model.</p>
+<h2 id="establishing-a-connection-to-models-deployed-in-windowsni-linux-real-time-systems">Establishing a Connection to Models Deployed in Windows/NI Linux Real-Time Systems</h2>
+<p>Models imported into a VeriStand system definition and deployed to Windows/NI Linux Real-Time systems can also be connected from Simulink.</p>
+<ul>
+<li>Determine the port number by examining the ExternalMode/Port parameter in VeriStand.</li>
+</ul>
+<figure>
+<img src="resources/import_external_mode.png" alt="import_external_mode" />
+</figure>
+<p><strong>Note:</strong> When deploying a model compiled with external mode, VeriStand opens a controller port in the dynamic range of 1025 to 65536.</p>
+<ul>
+<li>In the <a href="https://www.mathworks.com/help/rtw/ref/mex-file-arguments.html">MEX-filearguments</a>,specify the target IP address, port number. For XCP communication,specify symbols file name additionally.</li>
+<ul>
+<li>For symbols file name, specify the binary name. Example: 'SampleModel.so'</li>
+</ul></li>
+<li>In the <a href="https://www.mathworks.com/help/ecoder/ug/external-mode-simulation-with-tcpip-or-serial-communication.html#f1014805">External Mode Control Panel</a>, click Connect.</li>
+</ul>
+<h2 id="external-mode-limitations">External Mode Limitations</h2>
+<ul>
+<li>Deploying a model is not supported from Simulink when using veristand.tlc. You must deploy through VeriStand.</li>
+<li>Starting or stopping a model from Simulink is not supported.</li>
+<li>Connecting to a model is supported only when it is in running state.</li>
+</ul>
+</body>
+</html>

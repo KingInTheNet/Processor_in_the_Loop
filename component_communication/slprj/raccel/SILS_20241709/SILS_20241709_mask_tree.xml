@@ -1,0 +1,2126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/SlsaMaskTree/R2020a">
+  <slsa.mm.maskTree.MaskTree type="slsa.mm.maskTree.MaskTree" uuid="68fcf1b6-320a-4ed4-bcde-ca3f5cdd38ad">
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="b49d3156-89a9-46be-9c94-7a32c339bd44">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/OrbitalDynamics/calc_q/Quaternion Multiplication</blockPath>
+      <id>SILS_20241709:119:2529:162</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="b2837eb8-9108-4af0-aabe-f1e723e2be31">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="9ad506af-b0bb-439f-89db-ae472f77940c">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/OrbitalDynamics/calc_q/Quaternion Multiplication1</blockPath>
+      <id>SILS_20241709:119:2529:163</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="ea1362b5-2cb1-4695-83b2-9cf16886762e">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="629253b2-99d3-49b6-9dd4-cef6c7d00534">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/OrbitalDynamics/calc_q/Quaternion Normalize</blockPath>
+      <childrenIds>SILS_20241709:119:2529:164:384</childrenIds>
+      <id>SILS_20241709:119:2529:164</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="82aa4ffb-478d-41fd-81c0-4d2058dfdf13">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="e283eaa1-3e64-4b55-9e5a-744f29f3fc97">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="047a1146-6486-4a8c-a043-0bd696534842">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/OrbitalDynamics/calc_q/Quaternion Normalize/Quaternion Modulus</blockPath>
+      <childrenIds>SILS_20241709:119:2529:164:384:385</childrenIds>
+      <id>SILS_20241709:119:2529:164:384</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="d72307c5-9cc1-4378-b007-445490f137a9">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="54808877-2788-48d0-8cfc-bb2d05913e8f">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="9b0ceda2-10ec-4a2f-b3f5-00c0814a2094">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:119:2529:164</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:119:2529:164</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="bc65842d-a6e0-4ef9-b8fb-7bb911f7df39">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/OrbitalDynamics/calc_q/Quaternion Normalize/Quaternion Modulus/Quaternion Norm</blockPath>
+      <id>SILS_20241709:119:2529:164:384:385</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="cc665031-d84b-41c9-85ee-6ea59c385f6a">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ff28da4b-57fb-4762-abf5-d34229f6dc44">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="60cb8c2a-1947-4f4c-96f6-9c27372cd8bb">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:119:2529:164:384</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:119:2529:164:384</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="34b456dc-0b41-4be4-9239-ccf64b489a59">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/RigidBodyDynamics/Quaternion Normalize</blockPath>
+      <childrenIds>SILS_20241709:120:2555:384</childrenIds>
+      <id>SILS_20241709:120:2555</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="9042b597-4346-4b77-b468-08da5a1bcc94">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c16936bd-8a21-494e-b2c9-6c97c8110463">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="071a0f43-1a65-454d-8902-18271368584e">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/RigidBodyDynamics/Quaternion Normalize/Quaternion Modulus</blockPath>
+      <childrenIds>SILS_20241709:120:2555:384:385</childrenIds>
+      <id>SILS_20241709:120:2555:384</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="716aca61-39e4-4c6b-992f-3b68b7e75f78">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="41990df1-a5f1-47cf-937c-ae6838de4bbc">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="476ff321-b58a-4790-a1b0-78ee28e516ea">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:120:2555</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:120:2555</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="b1911641-a68b-4083-8bef-599394404688">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/RigidBodyDynamics/Quaternion Normalize/Quaternion Modulus/Quaternion Norm</blockPath>
+      <id>SILS_20241709:120:2555:384:385</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="f5e47891-5d64-4212-b471-e5e2c283fe5b">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="4b05f4c5-7276-44a4-8bf7-c10a3d922b19">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="c3e3766f-fd7c-43bd-8c1f-91c724f4d899">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:120:2555:384</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:120:2555:384</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="409714a0-acb6-4d13-8ebf-b8558ae5cd8c">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Direction Cosine Matrix ECEF to NED</blockPath>
+      <childrenIds>SILS_20241709:169:271</childrenIds>
+      <id>SILS_20241709:169</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="0fd79829-daa7-40f3-a162-91fe4617387b">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="b470d8c8-f9a9-4404-87ca-a8fd0174b23e">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Direction Cosine Matrix ECEF to NED/Create Transformation Matrix</blockPath>
+      <id>SILS_20241709:169:271</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="1c0d21b9-9cf8-44da-a6a5-293ad79d3382">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b01653cb-3d8d-4c2e-a2be-69fcaeb208ef">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:169</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="cd9c71df-4a6b-4aaa-abed-2b5c839a70e4">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Invert  3x3 Matrix</blockPath>
+      <childrenIds>SILS_20241709:175:172</childrenIds>
+      <id>SILS_20241709:175</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="9dcd775e-d40d-496c-ab81-d37970276841">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="922a07db-f9cf-4e18-b71b-823928d75c94">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Invert  3x3 Matrix/Determinant of 3x3 Matrix</blockPath>
+      <id>SILS_20241709:175:172</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="22f6f95c-96df-424c-9898-c224db782058">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="95931f95-10bb-43a4-af03-f07a0ace3eed">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:175</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="6e1ec9da-446f-4739-bf98-690222b6336f">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Invert  3x3 Matrix1</blockPath>
+      <childrenIds>SILS_20241709:176:172</childrenIds>
+      <id>SILS_20241709:176</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="d329191a-630b-4d9c-8e34-7ff8aeb61fa9">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="0e835bbb-3df1-402d-81ca-cb867dfda904">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Invert  3x3 Matrix1/Determinant of 3x3 Matrix</blockPath>
+      <id>SILS_20241709:176:172</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="ff59186f-0a85-4f8e-8db1-53e13d8f7f31">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="82f41667-1c49-4735-a979-de43f4398ebd">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:176</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="b0407dad-9338-4932-a90d-5366ae4bcf2a">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Quaternion Rotation</blockPath>
+      <childrenIds>SILS_20241709:180:296</childrenIds>
+      <id>SILS_20241709:180</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="7f0e403a-9bbc-4243-be13-dc0bd0c4ac96">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="8caaf499-c5f6-41ef-b74b-0646187cae38">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Quaternion Rotation/Quaternion Normalize</blockPath>
+      <childrenIds>SILS_20241709:180:296:384</childrenIds>
+      <id>SILS_20241709:180:296</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="76503b4c-9aba-4728-9928-8cc482c46149">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="889f9639-8a69-4545-850e-0763031104ab">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:180</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="7b9506db-a2d2-4eb9-bdab-f1d6ef11d991">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Quaternion Rotation/Quaternion Normalize/Quaternion Modulus</blockPath>
+      <childrenIds>SILS_20241709:180:296:384:385</childrenIds>
+      <id>SILS_20241709:180:296:384</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="007fc0cf-cff6-4ecd-96c6-d43e4d7915c0">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b9af4431-3293-41a6-a90d-e906b95d7f71">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="0461a20a-f48a-4241-b92c-e2c5b8d5d0f6">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:180:296</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:180:296</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="769827e5-c7e4-4c17-b277-01da52dcf324">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Quaternion Rotation/Quaternion Normalize/Quaternion Modulus/Quaternion Norm</blockPath>
+      <id>SILS_20241709:180:296:384:385</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="dca76442-46eb-4149-bc89-f103f9344e0d">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="74c196ec-5923-45c0-a119-5d14dd42acd7">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="111c74df-0bbd-41de-a814-2dc334dcb022">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:180:296:384</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:180:296:384</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="ac70ef7d-5301-4b4f-acac-a3e60e1caa47">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/earth_vec_b/Normalize Vector</blockPath>
+      <id>SILS_20241709:243:226</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="b2a0510b-05ca-4c41-a9a8-c04ef24cf531">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="4c97fcb7-7806-41df-b62a-8a527c5f39bc">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>maxzero</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="f5f00eb6-1d73-4d3f-b8a6-0680f2b21464">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/earth_vec_b/Quaternion Rotation</blockPath>
+      <childrenIds>SILS_20241709:243:227:296</childrenIds>
+      <id>SILS_20241709:243:227</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="17eabd9f-e1e6-440e-b629-7976c593257e">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="3a1f8eb4-c522-4575-aba9-16e7ec94e185">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/earth_vec_b/Quaternion Rotation/Quaternion Normalize</blockPath>
+      <childrenIds>SILS_20241709:243:227:296:384</childrenIds>
+      <id>SILS_20241709:243:227:296</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="135aeef3-1b51-4caa-907b-ad5935a8c370">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="aa11eabf-16a0-4153-82c2-070f0471a4b7">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:243:227</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="8338a0ab-a31f-4a02-beb4-facb6aeb1f45">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/earth_vec_b/Quaternion Rotation/Quaternion Normalize/Quaternion Modulus</blockPath>
+      <childrenIds>SILS_20241709:243:227:296:384:385</childrenIds>
+      <id>SILS_20241709:243:227:296:384</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="24811af1-54ed-41b0-8ce8-d6552d69f2f4">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="38f49588-9b60-499d-8ba2-66ff7bdfc77d">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="b46a8159-d360-4b15-99fc-44e58bf42d59">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:243:227:296</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:243:227:296</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="c243f97b-2c6b-4f10-8e72-20d28dec4af9">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/earth_vec_b/Quaternion Rotation/Quaternion Normalize/Quaternion Modulus/Quaternion Norm</blockPath>
+      <id>SILS_20241709:243:227:296:384:385</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="0e7afd0a-06dd-484e-9f9a-b953368318ad">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="83385dd1-1119-4d0c-ac4b-4c46358a0de9">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="4306da95-d237-4b99-b191-61b11ca49cae">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:243:227:296:384</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:243:227:296:384</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="402060f1-83e6-446d-8a13-3c318e0bf217">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/sat2obj_vec_b/Normalize Vector</blockPath>
+      <id>SILS_20241709:245:107</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="803dc1a9-2770-4839-b4a9-4d480891935c">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ea44cbb3-ee7e-473a-9a06-9e74630646fd">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>maxzero</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="65ff8ad9-c4c2-49fc-97a5-ae59da64422a">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/sat2obj_vec_b/Quaternion Rotation</blockPath>
+      <childrenIds>SILS_20241709:245:108:296</childrenIds>
+      <id>SILS_20241709:245:108</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="94fabc4d-08a5-447b-8cbb-7d25a8bea165">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="cf01c4df-af38-461f-b2d8-950c5b567bad">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/sat2obj_vec_b/Quaternion Rotation/Quaternion Normalize</blockPath>
+      <childrenIds>SILS_20241709:245:108:296:384</childrenIds>
+      <id>SILS_20241709:245:108:296</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="fcb12cb5-4437-4d6f-b5fc-86bd70b5ff9e">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9527a44e-de73-4d95-b3db-d724e2ec359e">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:245:108</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="ad4d3a5a-fcbb-42a0-9945-11c0e258475d">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/sat2obj_vec_b/Quaternion Rotation/Quaternion Normalize/Quaternion Modulus</blockPath>
+      <childrenIds>SILS_20241709:245:108:296:384:385</childrenIds>
+      <id>SILS_20241709:245:108:296:384</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="cd19a100-17e7-433d-ae0c-d17a5290844c">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b06561ee-7dd0-45dd-aa12-c873b4337e16">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="b805f529-33f7-4587-86cd-c9e61facc86d">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:245:108:296</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:245:108:296</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="c96663db-3fd8-4676-b295-493e45528b24">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/sat2obj_vec_b/Quaternion Rotation/Quaternion Normalize/Quaternion Modulus/Quaternion Norm</blockPath>
+      <id>SILS_20241709:245:108:296:384:385</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="f2c6752a-a723-4f02-a9a9-a44944b3d8a0">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="bfe0e6bb-4cd3-4281-868d-c59c5bed6492">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="2b88331d-5097-4b43-9723-f62e70474716">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:245:108:296:384</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:245:108:296:384</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="f0cb77dc-2abf-47e3-a582-14b7573e82e1">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/sat2obj_vec_b1/Normalize Vector</blockPath>
+      <id>SILS_20241709:246:107</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="c69fa83f-9cd6-4d66-8575-8020513cd0d1">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="03b3e938-40f9-4b9f-97de-63e5bd17b804">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>maxzero</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="ae1e9bc1-e03e-4855-95b3-5f1223967779">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/sat2obj_vec_b1/Quaternion Rotation</blockPath>
+      <childrenIds>SILS_20241709:246:108:296</childrenIds>
+      <id>SILS_20241709:246:108</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="c660c735-6bd9-4d7f-b36d-074e42d85406">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="8c1f6abd-57b5-442e-84c7-9e3c21d7fe7a">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/sat2obj_vec_b1/Quaternion Rotation/Quaternion Normalize</blockPath>
+      <childrenIds>SILS_20241709:246:108:296:384</childrenIds>
+      <id>SILS_20241709:246:108:296</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="58ace51c-ce9d-4428-8dba-7a7d93efceaa">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="628f7f45-500f-489e-9172-b8089d63853b">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:246:108</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="66974374-36db-4514-8954-b4706c701dcf">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/sat2obj_vec_b1/Quaternion Rotation/Quaternion Normalize/Quaternion Modulus</blockPath>
+      <childrenIds>SILS_20241709:246:108:296:384:385</childrenIds>
+      <id>SILS_20241709:246:108:296:384</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="42bb7434-a1ea-493f-ad08-58bc2eb826e0">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="7aae1e27-3b6b-43b7-81b9-91a0fbd089c0">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="3b3b6901-0c22-43fe-9cc1-b5d49d2411db">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:246:108:296</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:246:108:296</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="5b0fc00d-159f-4386-b92d-1b42e6502d99">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/sat2obj_vec_b1/Quaternion Rotation/Quaternion Normalize/Quaternion Modulus/Quaternion Norm</blockPath>
+      <id>SILS_20241709:246:108:296:384:385</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="9779b8b4-aa36-4e74-8a79-9c191078d345">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0ddfe2a1-c73f-4486-bb30-b89e676e7686">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="176e22b8-d017-4ae7-af8e-bd02d5949c8e">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:246:108:296:384</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:246:108:296:384</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="f187c3f1-ddbe-4ea6-84df-6b1aa5ac3f7e">
+      <blockPath>SILS_20241709/Sensors/NSAS1/&lt;55deg</blockPath>
+      <id>SILS_20241709:306:2875</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="edcf76ea-108f-48b6-ba49-137c49373fa7">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3f67d7a3-25ae-47b3-9196-4a3d01151041">
+          <expression>&lt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="19078594-6b7c-4a39-b273-1b136907514e">
+          <evaluate>true</evaluate>
+          <expression>NSAS_ang_limit</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="c350ddbb-059a-4f56-832c-ce02fa9b89cf">
+            <name>NSAS_ang_limit</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="7fb4d03d-2f51-42c6-8ac4-dfacf7ce3307">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d54f1515-ce11-44e6-ad3e-a89d44e56a50">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="cfeed309-42d4-4487-8ba8-1f112562da82">
+      <blockPath>SILS_20241709/Sensors/NSAS1/Normalize Vector</blockPath>
+      <id>SILS_20241709:306:5302</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="bb95c4a6-ac17-47b2-aaec-f7de35dbc6cb">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="625c192c-8ea2-4ec1-b940-8e73b0ebbb31">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>maxzero</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="9753d0e7-84d1-4cd7-a580-a392e99ea1a8">
+      <blockPath>SILS_20241709/Sensors/NSAS1/z&gt;0</blockPath>
+      <id>SILS_20241709:306:6218</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="2385762d-24d5-4bc9-b2b4-3f0013b97ca9">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3e8489c1-1f0a-4c14-ba80-476e68dd189a">
+          <expression>&gt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d57f98de-1099-4e9d-bfb1-b95b22d3efa5">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="81d2119a-d8c2-43be-8adc-8f122787ce52">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3a997b59-33d9-47a8-a891-bfd92139953b">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="7d235fed-f65b-4998-8afe-ad16b8d8a3a8">
+      <blockPath>SILS_20241709/Sensors/NSAS2/&lt;55deg</blockPath>
+      <id>SILS_20241709:308:2875</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="276a2eff-9815-426f-86cc-e3784cfb471b">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="aaf69b9a-f0f5-4b33-a0c0-e6bfc2593641">
+          <expression>&lt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c92d42ba-d521-45f7-af8b-8b35c1a4826f">
+          <evaluate>true</evaluate>
+          <expression>NSAS_ang_limit</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="20f2ac95-2aee-4a04-8bff-89fb59ae67ba">
+            <name>NSAS_ang_limit</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ad71a47d-7c70-47b0-9f38-f80c3d733f07">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="e997d27b-f49e-4f9e-9259-6b8028216cff">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="d1a776d6-b712-4ae9-8029-d0c133206710">
+      <blockPath>SILS_20241709/Sensors/NSAS2/Normalize Vector</blockPath>
+      <id>SILS_20241709:308:5302</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="0d227535-caec-4d24-a84a-d146494d99ea">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b5e331a2-d66f-42fb-84db-1a92cd46f846">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>maxzero</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="87bf40a0-6cca-46f7-8866-1b4e33948624">
+      <blockPath>SILS_20241709/Sensors/NSAS2/z&gt;0</blockPath>
+      <id>SILS_20241709:308:6218</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="5f39d687-2992-43e3-80a5-b25186daf278">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="19b24ba2-cfda-47e5-bf3f-cd99baf4114a">
+          <expression>&gt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="39694437-17ff-408d-b16f-3a8ce70fe8ff">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6bdaf0c3-9ebf-4d5b-bc3b-1958abe91739">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="31816dea-a1cc-4dae-9a05-eca84c001d52">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="fd83553d-be4f-4d2a-aab5-7ec8ed8b4e43">
+      <blockPath>SILS_20241709/Sensors/NSAS3/&lt;55deg</blockPath>
+      <id>SILS_20241709:310:2875</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="d904a050-3ac2-48ad-9aeb-1c42559c8eec">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="78d510f3-180b-4dfa-b52b-c37d3e7fa14a">
+          <expression>&lt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="8be164bd-7f9e-4da8-aeab-1ce27b3d0944">
+          <evaluate>true</evaluate>
+          <expression>NSAS_ang_limit</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="a08a67b9-f94d-462b-9b87-7a68a7e1226c">
+            <name>NSAS_ang_limit</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="7241c7d2-628f-4a3e-8219-f2fc74031237">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="662b8cf5-dc96-465f-9262-6aad80b0833b">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="7f5d2b7a-113f-41f2-9a59-542679a17bfa">
+      <blockPath>SILS_20241709/Sensors/NSAS3/Normalize Vector</blockPath>
+      <id>SILS_20241709:310:5302</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="a52041c7-f9f9-4c19-8a37-b1a47301bb90">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ac381842-570f-4594-9de1-785d23bc2a0e">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>maxzero</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="62815a5a-c1df-4007-b23d-962bff8fb8cf">
+      <blockPath>SILS_20241709/Sensors/NSAS3/z&gt;0</blockPath>
+      <id>SILS_20241709:310:6218</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="58d71e6c-0632-4fe7-b75c-f9bb2d1d8dab">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="45ae8145-2a73-47bd-87fc-a04d8d06ce8a">
+          <expression>&gt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d5771511-cd55-441e-af9a-d36eb566e386">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="fcbc6d6c-4045-4573-8e32-1a64112b87b2">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="7f09929f-ddf0-4d6f-9af3-e0b3a9754593">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="81759afe-d48e-41fc-85f8-9c589cc66751">
+      <blockPath>SILS_20241709/Sensors/Quaternion Multiplication</blockPath>
+      <id>SILS_20241709:312</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="63887c91-e8c2-439b-ba32-1e10d8f6b3cd">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="0538ad09-9a52-4372-bfb0-4ce4ef6bc96f">
+      <blockPath>SILS_20241709/Sensors/Quaternions to  Direction Cosine Matrix</blockPath>
+      <childrenIds>SILS_20241709:313:1243</childrenIds>
+      <childrenIds>SILS_20241709:313:1244</childrenIds>
+      <id>SILS_20241709:313</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="16d54149-75df-4638-9fdb-7efd0c3ced75">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6d4be96f-1c83-49d6-bd20-bc66e85a04d0">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    ports=aerosharedicon(&apos;shared&apos;);
+else
+    ports=sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="05e45825-e024-4da0-a2fa-c820c029b888">
+      <blockPath>SILS_20241709/Sensors/Quaternions to  Direction Cosine Matrix/Create 3x3 Matrix</blockPath>
+      <id>SILS_20241709:313:1243</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="49f1cd5a-d835-4d6b-8b1e-3d408c6ab454">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="45a0733f-f8e3-4f55-87e0-0795d509ddf3">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="17c921d4-8646-4931-9697-4a18b2d19ba7">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:313</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:313</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="7b07e868-12e7-4c5e-92fd-41db16c9414c">
+      <blockPath>SILS_20241709/Sensors/Quaternions to  Direction Cosine Matrix/Quaternion Normalize</blockPath>
+      <childrenIds>SILS_20241709:313:1244:384</childrenIds>
+      <id>SILS_20241709:313:1244</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="98d5bb4d-b364-4b23-8a25-9227d7d810c4">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="303f08fa-8eec-4a4f-879c-f9c588ab82ea">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="de26e590-8a84-4632-b6df-d397b7dd1a2d">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:313</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:313</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="88decced-1f03-4877-b413-a604608d991b">
+      <blockPath>SILS_20241709/Sensors/Quaternions to  Direction Cosine Matrix/Quaternion Normalize/Quaternion Modulus</blockPath>
+      <childrenIds>SILS_20241709:313:1244:384:385</childrenIds>
+      <id>SILS_20241709:313:1244:384</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="ab37179c-9b98-443e-a754-628ce94b1450">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="10c153ab-a4c9-496b-845e-f5281a09ee05">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="7574c30e-c74a-4c2a-953e-58f01736d988">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:313:1244</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:313:1244</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="57c5e215-4557-4154-95b9-431050e57884">
+      <blockPath>SILS_20241709/Sensors/Quaternions to  Direction Cosine Matrix/Quaternion Normalize/Quaternion Modulus/Quaternion Norm</blockPath>
+      <id>SILS_20241709:313:1244:384:385</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="4b573914-cb04-43df-a975-4146806ad8de">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="5214cd27-0dc2-4ba0-853f-73c655920655">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="7cbdb38e-ecf2-401d-a338-44bd9efd575a">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:313:1244:384</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:313:1244:384</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="28b46aec-64ad-4425-8448-59c98d842b54">
+      <blockPath>SILS_20241709/Sensors/STT1/&lt;35deg</blockPath>
+      <id>SILS_20241709:314:2910</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="53df935d-9cf4-4be1-83c1-3e4c20392630">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ac8ba1c6-2c0a-4f88-acde-391e93e0fc05">
+          <expression>&lt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1031865b-96c9-4d25-9bc9-01024e3f6a8d">
+          <evaluate>true</evaluate>
+          <expression>STT_sun_ang_limit</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="df3b5560-7e8b-4fdc-bccc-ed81acda1a45">
+            <name>STT_sun_ang_limit</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="555b65ad-44da-4401-a9da-0976c9f12d54">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="8a1036bc-1ecd-443b-aa7b-db1671ac442d">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="51f3f409-3e12-4794-9b5e-16efff4a55f2">
+      <blockPath>SILS_20241709/Sensors/STT1/&lt;5deg</blockPath>
+      <id>SILS_20241709:314:2911</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="5f2a4dfc-9b1d-4c62-9994-e36cee6ecc88">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="07d1e4d8-1d1c-4d61-867e-ce3a1a286dfd">
+          <expression>&lt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="93eb6534-2961-4afd-95c4-cf7543222fb6">
+          <evaluate>true</evaluate>
+          <expression>STT_moon_ang_limit</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="8fea1288-8ff8-4be6-84ea-d4740b924e86">
+            <name>STT_moon_ang_limit</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d72e49b5-b04e-45ad-a365-49581c15953f">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="e22de005-481d-406a-8128-6fe1bcdd6988">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="d7054802-e5d1-4a0a-9bd2-0db14ac77872">
+      <blockPath>SILS_20241709/Sensors/STT1/Compare To Constant</blockPath>
+      <id>SILS_20241709:314:2912</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="a9990eaa-364c-4c8c-8863-f05a5aea8a16">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="92b0b6f1-851f-4039-a748-410fb148db4b">
+          <expression>&gt;=</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="5e4474f1-a465-4283-9c37-e07b5d5884a0">
+          <evaluate>true</evaluate>
+          <expression>STT_AD_prob</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="744f5ed1-18a1-48b9-b3a1-0c7be712036c">
+            <name>STT_AD_prob</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="eba09073-1973-4c8c-865f-b082b5d3bcf5">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9c64ee06-2813-40a1-9556-8ee10e9bf99c">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="90fe0f5c-867d-410d-a05a-8bd2f77b5d03">
+      <blockPath>SILS_20241709/Sensors/STT1/Quaternion Multiplication</blockPath>
+      <id>SILS_20241709:314:2922</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="daba5ec4-db22-49b9-91c6-91fd74cfab92">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="42498850-285a-42de-a1ae-441a62f500ae">
+      <blockPath>SILS_20241709/Sensors/STT1/Quaternion Multiplication1</blockPath>
+      <id>SILS_20241709:314:2923</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="17cb1585-d96d-44f8-ab55-9f7c4b6179ef">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="061813ac-f14f-4ac4-b690-be2d17f70f38">
+      <blockPath>SILS_20241709/Sensors/STT1/Quaternion Multiplication2</blockPath>
+      <id>SILS_20241709:314:2924</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="6c02c631-60fa-4b15-8358-c1740e203c67">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="e3d9571e-61d0-40e6-9ea5-f0a85eaf5ff4">
+      <blockPath>SILS_20241709/Sensors/STT1/Quaternion Normalize</blockPath>
+      <childrenIds>SILS_20241709:314:2925:384</childrenIds>
+      <id>SILS_20241709:314:2925</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="add003a4-611c-41d6-a4b3-93060c68934e">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b3e4dfc4-43e5-457f-b36b-1ec15022b70e">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="c98aad2b-d456-40fe-950f-d6ba1cfa5342">
+      <blockPath>SILS_20241709/Sensors/STT1/Quaternion Normalize/Quaternion Modulus</blockPath>
+      <childrenIds>SILS_20241709:314:2925:384:385</childrenIds>
+      <id>SILS_20241709:314:2925:384</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="f0eff50b-65c2-44c2-911c-515510d40618">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2b3f7b6d-14f2-41a8-8106-8e5a7765ea08">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="dec94d6f-3e33-4882-a6af-8b2d44f20e04">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:314:2925</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:314:2925</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="f0be306d-d0ea-41bf-ad99-bd90d4fba57d">
+      <blockPath>SILS_20241709/Sensors/STT1/Quaternion Normalize/Quaternion Modulus/Quaternion Norm</blockPath>
+      <id>SILS_20241709:314:2925:384:385</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="08d67d09-e88b-4618-acbd-b7fbf9ae0fcb">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d412fc63-16cc-4b39-8450-3e424cb4f45e">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="60e5d65d-2e14-41d1-83d8-512c2218eb0e">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:314:2925:384</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:314:2925:384</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="9b31cc46-1a7a-4787-b9b5-532a51b457ad">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Air Drag/Quaternion Rotation2</blockPath>
+      <childrenIds>SILS_20241709:424:2433:296</childrenIds>
+      <id>SILS_20241709:424:2433</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="b74e723a-9231-4ad0-bbe7-83f7dbb31e7f">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="2b9c8670-7ed3-477b-9422-eda2685609aa">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Air Drag/Quaternion Rotation2/Quaternion Normalize</blockPath>
+      <childrenIds>SILS_20241709:424:2433:296:384</childrenIds>
+      <id>SILS_20241709:424:2433:296</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="030be366-bfaa-4b8b-8c68-634b64da7751">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9002dbc7-4cc0-4e60-b56d-bb5571b5a56c">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:424:2433</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="ed1d8d22-a9b9-4a82-9665-33a25ce6cd81">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Air Drag/Quaternion Rotation2/Quaternion Normalize/Quaternion Modulus</blockPath>
+      <childrenIds>SILS_20241709:424:2433:296:384:385</childrenIds>
+      <id>SILS_20241709:424:2433:296:384</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="ea4ac4e7-d912-4053-ba78-23326d1c28c2">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="11010eb5-0848-4362-88f8-b7dd718081e1">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="2b95d0a9-8a8a-4ec0-9454-169d7d3aa481">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:424:2433:296</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:424:2433:296</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="0e48c479-0789-4c96-b2a2-c8247ea42f11">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Air Drag/Quaternion Rotation2/Quaternion Normalize/Quaternion Modulus/Quaternion Norm</blockPath>
+      <id>SILS_20241709:424:2433:296:384:385</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="6938773d-1f81-48bd-99f2-cb16dea7a049">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="7bf6cfa5-396b-472f-b6b7-9e8f70f32fa6">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="2e7630a8-2638-4054-8dcc-1321f4efd612">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:424:2433:296:384</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:424:2433:296:384</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="4ef15327-95b4-48eb-a739-02596f43d317">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Gravity Gradient/Quaternion Rotation1</blockPath>
+      <childrenIds>SILS_20241709:428:2499:296</childrenIds>
+      <id>SILS_20241709:428:2499</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="057c1d85-3f69-4b37-a079-7d41b5bee4b7">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="74249cf9-41a5-4521-888e-302faf457eed">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Gravity Gradient/Quaternion Rotation1/Quaternion Normalize</blockPath>
+      <childrenIds>SILS_20241709:428:2499:296:384</childrenIds>
+      <id>SILS_20241709:428:2499:296</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="898704e4-64e2-4b4a-a38a-2820e2fab6c2">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2dd881b9-8412-4df2-9bf4-00c13cfbd04d">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:428:2499</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="e0ddbbd1-110f-4a7e-88c8-299f18fc78d8">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Gravity Gradient/Quaternion Rotation1/Quaternion Normalize/Quaternion Modulus</blockPath>
+      <childrenIds>SILS_20241709:428:2499:296:384:385</childrenIds>
+      <id>SILS_20241709:428:2499:296:384</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="dae52424-ede1-4686-8aff-df3a99741482">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b3d2576d-a7ec-4fbe-91a3-acefb34d194e">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="f9601695-e5d8-4dc2-8e11-496efadef906">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:428:2499:296</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:428:2499:296</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="8a5cbd87-9549-4c99-be04-846b80400fff">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/Gravity Gradient/Quaternion Rotation1/Quaternion Normalize/Quaternion Modulus/Quaternion Norm</blockPath>
+      <id>SILS_20241709:428:2499:296:384:385</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="35de3913-08a7-4486-8791-35f4ef2b0898">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ba299fb4-48ae-40aa-89d8-6745174b61c3">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="1b33d3f0-4d08-4321-924c-28aa4c4f6a8d">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:428:2499:296:384</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:428:2499:296:384</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="c3f3eebd-72ee-4747-8601-6fcc2f8ed778">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/SRP/Normalize Vector</blockPath>
+      <id>SILS_20241709:431:2570</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="6fd3ba1a-f85a-44eb-989f-446a264e25ef">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b4c71a05-cc11-485c-9b91-8ebef12ce096">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>maxzero</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="71293f59-3c19-4e75-a818-e6920a1c45fd">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/SRP/Quaternion Rotation2</blockPath>
+      <childrenIds>SILS_20241709:431:2572:296</childrenIds>
+      <id>SILS_20241709:431:2572</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="e15427bb-e45f-4683-8af0-6c1276e473eb">
+        <initializationCode>aeroicon(&apos;aeroblk&apos;);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="c19d93fe-2dfb-45c5-ae0c-877a930fca56">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/SRP/Quaternion Rotation2/Quaternion Normalize</blockPath>
+      <childrenIds>SILS_20241709:431:2572:296:384</childrenIds>
+      <id>SILS_20241709:431:2572:296</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="41886442-cf54-4b23-a307-08fd72910b4f">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="8c97de9a-508c-4bf0-adc1-e844bbe9dec3">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:431:2572</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="c4c2d6f0-5323-4d05-968b-e6ed782335d4">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/SRP/Quaternion Rotation2/Quaternion Normalize/Quaternion Modulus</blockPath>
+      <childrenIds>SILS_20241709:431:2572:296:384:385</childrenIds>
+      <id>SILS_20241709:431:2572:296:384</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="186a333e-40b4-480d-97a8-da5645950e98">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="eec546cb-c1eb-43d4-a804-ef6ab373aada">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="ef4897e9-1265-491e-911a-02aceece5f61">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:431:2572:296</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:431:2572:296</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="e33c5491-2463-417e-8533-3543d0ae2efc">
+      <blockPath>SILS_20241709/Environment&amp;Dynamics/SRP/Quaternion Rotation2/Quaternion Normalize/Quaternion Modulus/Quaternion Norm</blockPath>
+      <id>SILS_20241709:431:2572:296:384:385</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="21be1b58-ef82-4b46-bea8-f3f5de91ef73">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c23c6be6-2e0c-43ce-add6-567de972f72a">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="c763eeda-0806-4a4a-8f9e-246321530986">
+            <name>aMode</name>
+            <value></value>
+            <workspace>SILS_20241709:431:2572:296:384</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>SILS_20241709:431:2572:296:384</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="ad9579e6-b8fe-441b-838a-e33432b38ed7">
+      <blockPath>SILS_20241709/Sensors/NSAS4/&lt;55deg</blockPath>
+      <id>SILS_20241709:582:2875</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="84f4d458-6a95-4b4e-8b53-45c7477c768d">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="5d38577a-8acf-4bfb-a529-7e98505ed1b2">
+          <expression>&lt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1ed23211-8d39-4769-8e90-d0823a6fcaa1">
+          <evaluate>true</evaluate>
+          <expression>NSAS_ang_limit</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="3252a20f-5839-4501-b417-d9cce4d50669">
+            <name>NSAS_ang_limit</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="e4a1af5f-61cf-4225-94e1-24883a962866">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="67bbc6e0-7cb6-4d87-a50d-e2039c9e8c18">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="9991e956-883e-4c8b-9c77-66a028edf51c">
+      <blockPath>SILS_20241709/Sensors/NSAS4/Normalize Vector</blockPath>
+      <id>SILS_20241709:582:5302</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="7c088924-5e94-47dd-9825-41b7b5ab0136">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="020d105f-c29f-4477-b46e-f9df4a2fe0e5">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>maxzero</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="a4e71361-c31c-4b54-9526-103fed726ddb">
+      <blockPath>SILS_20241709/Sensors/NSAS4/z&gt;0</blockPath>
+      <id>SILS_20241709:582:6218</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="f1b20a61-e4cb-4aba-b9d9-d9a9fab79c6e">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="bf93d410-d4e3-4b8c-9f97-d245baadb6f2">
+          <expression>&gt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="14165edd-e7ed-44b2-a576-32b639dcc287">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="8e7932eb-4e94-4c76-956d-78163b7aee18">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="af9a71c3-c9d7-425a-abe8-5e12dc8d2a59">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="2989c107-7c3f-4398-8a89-2f3732e8af3c">
+      <blockPath>SILS_20241709/Sensors/NSAS5/&lt;55deg</blockPath>
+      <id>SILS_20241709:588:2875</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="d9d8b217-4f8d-40dc-8ed0-9f49e24445b0">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="46b253fb-f78e-41da-ad91-517067967cab">
+          <expression>&lt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="20f2181a-48b1-4e48-9b63-95d0eb796499">
+          <evaluate>true</evaluate>
+          <expression>NSAS_ang_limit</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="22b37bed-e9bf-4f93-be1e-ac9d272ead34">
+            <name>NSAS_ang_limit</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="33b4ca4d-2266-44a3-a1c9-6501947260d0">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="69d1ee9f-5efd-44f5-89cc-650b4680fc01">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="6e784645-5851-49d4-a769-d99603f0094f">
+      <blockPath>SILS_20241709/Sensors/NSAS5/Normalize Vector</blockPath>
+      <id>SILS_20241709:588:5302</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="2856ab3b-9a90-4ef7-bd67-09b71ac468dd">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="47f6b280-98e9-4ebc-8d17-c3bb40ec4f05">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>maxzero</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="a1d3d60c-168d-4adf-bd0b-b6dae3d706a3">
+      <blockPath>SILS_20241709/Sensors/NSAS5/z&gt;0</blockPath>
+      <id>SILS_20241709:588:6218</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="68947c07-dfd5-4376-9c91-a65ad7846adb">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3ed4910f-7623-4a56-89de-c89bfe267f99">
+          <expression>&gt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9d0e22db-4bbc-4541-aca2-8d47e0bdedd1">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="24749b48-c440-4135-add1-76fd62853faa">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="64fb954a-d2e5-432e-8ea1-979fdf50aa80">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="6a7416f8-df1c-4899-9bc6-a8030929f538">
+      <blockPath>SILS_20241709/Sensors/NSAS6/&lt;55deg</blockPath>
+      <id>SILS_20241709:594:2875</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="6b1700d1-a074-439f-8b05-04a7d60cf3fc">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="104032d5-ee88-4739-9370-efa74a9c79e0">
+          <expression>&lt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f5a1d876-7452-451b-8421-b536dfd3cec9">
+          <evaluate>true</evaluate>
+          <expression>NSAS_ang_limit</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="b22b8dac-8d08-412d-bc44-216182579678">
+            <name>NSAS_ang_limit</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="cbdab4ab-92c0-4e75-a3ce-57ec756bef66">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d18bf6e9-abdc-498a-b382-23fd3fe6bd77">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="582c7481-e184-48e1-bbfb-5e4bf395a29f">
+      <blockPath>SILS_20241709/Sensors/NSAS6/Normalize Vector</blockPath>
+      <id>SILS_20241709:594:5302</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="7505b0b0-2266-42eb-b682-425664cf3a4d">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="254a7b22-07a4-4364-b264-a2c038b82408">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>maxzero</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="c4acece4-4c4b-4561-9ac1-4799af8f62b6">
+      <blockPath>SILS_20241709/Sensors/NSAS6/z&gt;0</blockPath>
+      <id>SILS_20241709:594:6218</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="dca72c75-42fa-488f-8f1a-57cf0684f86a">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3c2a209a-bfdb-4e76-ab52-26303d1531c0">
+          <expression>&gt;</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="049a2f7d-ce30-4ab4-934c-efdab23d2b4e">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>const</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="45ab877a-0c8c-43db-9d2e-8de0bd91b927">
+          <expression>uint8</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="8f320918-932f-47c5-b38e-404b139bd116">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+	setValue = &apos;fixdt(0, 8, 0)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);
+
+str = [relop,&apos; C&apos;]; %default
+
+const_str = get_param(blkName, &apos;const&apos;);
+const_val = str2num(const_str);
+
+if isempty(const_val) %#ok&lt;ST2NM&gt;
+    %Expression/Variable
+    str = [relop, &apos; &apos;, strtrim(const_str)];
+else
+    if length(const_val) == 1 
+        if Simulink.data.isSupportedEnumClass(class(const_val))
+            % Special Handling for Enumerations
+            if Simulink.data.getEnumTypeInfo(class(const_val), &apos;AddClassNameToEnumNames&apos;)
+                str = [relop, &apos; &apos;, strtrim(const_str)];
+            else
+                str = [relop, &apos; &apos;, char(const_val)];
+            end
+        elseif(isfloat(const_val) || isinteger(const_val) || islogical(const_val)) 
+                str = [relop, &apos; &apos;, num2str(const_val)];
+        end
+    end
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="82467099-5978-4804-9360-693ab57e27f9">
+      <childrenIds>SILS_20241709:119:2529:162</childrenIds>
+      <childrenIds>SILS_20241709:119:2529:163</childrenIds>
+      <childrenIds>SILS_20241709:119:2529:164</childrenIds>
+      <childrenIds>SILS_20241709:120:2555</childrenIds>
+      <childrenIds>SILS_20241709:169</childrenIds>
+      <childrenIds>SILS_20241709:175</childrenIds>
+      <childrenIds>SILS_20241709:176</childrenIds>
+      <childrenIds>SILS_20241709:180</childrenIds>
+      <childrenIds>SILS_20241709:243:226</childrenIds>
+      <childrenIds>SILS_20241709:243:227</childrenIds>
+      <childrenIds>SILS_20241709:245:107</childrenIds>
+      <childrenIds>SILS_20241709:245:108</childrenIds>
+      <childrenIds>SILS_20241709:246:107</childrenIds>
+      <childrenIds>SILS_20241709:246:108</childrenIds>
+      <childrenIds>SILS_20241709:306:2875</childrenIds>
+      <childrenIds>SILS_20241709:306:5302</childrenIds>
+      <childrenIds>SILS_20241709:306:6218</childrenIds>
+      <childrenIds>SILS_20241709:308:2875</childrenIds>
+      <childrenIds>SILS_20241709:308:5302</childrenIds>
+      <childrenIds>SILS_20241709:308:6218</childrenIds>
+      <childrenIds>SILS_20241709:310:2875</childrenIds>
+      <childrenIds>SILS_20241709:310:5302</childrenIds>
+      <childrenIds>SILS_20241709:310:6218</childrenIds>
+      <childrenIds>SILS_20241709:312</childrenIds>
+      <childrenIds>SILS_20241709:313</childrenIds>
+      <childrenIds>SILS_20241709:314:2910</childrenIds>
+      <childrenIds>SILS_20241709:314:2911</childrenIds>
+      <childrenIds>SILS_20241709:314:2912</childrenIds>
+      <childrenIds>SILS_20241709:314:2922</childrenIds>
+      <childrenIds>SILS_20241709:314:2923</childrenIds>
+      <childrenIds>SILS_20241709:314:2924</childrenIds>
+      <childrenIds>SILS_20241709:314:2925</childrenIds>
+      <childrenIds>SILS_20241709:424:2433</childrenIds>
+      <childrenIds>SILS_20241709:428:2499</childrenIds>
+      <childrenIds>SILS_20241709:431:2570</childrenIds>
+      <childrenIds>SILS_20241709:431:2572</childrenIds>
+      <childrenIds>SILS_20241709:582:2875</childrenIds>
+      <childrenIds>SILS_20241709:582:5302</childrenIds>
+      <childrenIds>SILS_20241709:582:6218</childrenIds>
+      <childrenIds>SILS_20241709:588:2875</childrenIds>
+      <childrenIds>SILS_20241709:588:5302</childrenIds>
+      <childrenIds>SILS_20241709:588:6218</childrenIds>
+      <childrenIds>SILS_20241709:594:2875</childrenIds>
+      <childrenIds>SILS_20241709:594:5302</childrenIds>
+      <childrenIds>SILS_20241709:594:6218</childrenIds>
+      <id>root</id>
+    </maskedBlocks>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="fb778d01-d715-4b03-ac04-b1a548042462">
+      <name>NSAS_ang_limit</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAADr+/WbBt+4/</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="e92bbb20-016d-4510-9557-eca73406cbad">
+      <name>STT_AD_prob</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAM3MzMzMzCVA</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="aaa38725-31cf-4126-a5bc-4673cdf57028">
+      <name>STT_moon_ang_limit</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAOh9dHk8vr0/</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="5d9f9a02-969a-4606-88fc-7b54587e779d">
+      <name>STT_sun_ang_limit</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAPZbikE1jOM/</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <flags type="slsa.mm.maskTree.MaskTreeFlags" uuid="752dae5d-9bbb-4c8a-a1a4-7872f694dd6c"/>
+  </slsa.mm.maskTree.MaskTree>
+</MF0>

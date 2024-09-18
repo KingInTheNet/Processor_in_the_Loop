@@ -1,0 +1,7 @@
+AOCS_Process.obj
+Subsystem.obj
+createHandle.obj
+globals.obj
+nrlmsise-00.obj
+nrlmsise-00_data.obj
+sfunc_nrlmsise00_wrapper.obj
